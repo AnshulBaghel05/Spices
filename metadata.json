@@ -1,0 +1,7 @@
+{
+  "name": "Scpies - Feel the Heat of Real Spices",
+  "description": "An immersive, 3D-inspired culinary journey into the world of authentic spices. Explore our menu, book a table, and experience the perfect balance of heat and flavor.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

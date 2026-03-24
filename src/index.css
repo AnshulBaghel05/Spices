@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-spice-50: #fff9f5;
+  --color-spice-100: #fff1e6;
+  --color-spice-200: #fed7aa;
+  --color-spice-300: #fdba74;
+  --color-spice-400: #fb923c;
+  --color-spice-500: #f97316;
+  --color-spice-600: #ea580c;
+  --color-spice-700: #c2410c;
+  --color-spice-800: #9a3412;
+  --color-spice-900: #7c2d12;
+}
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #fff9f5 0%, #fff1e6 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  @apply font-sans text-spice-900 bg-spice-50;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
+
+.glass {
+  @apply backdrop-blur-md bg-white/70 border border-white/30;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-spice-600 to-spice-800;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
